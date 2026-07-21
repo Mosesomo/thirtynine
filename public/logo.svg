@@ -1,0 +1,14 @@
+<svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Logo with transparent background -->
+  <!-- Black arc (left) -->
+  <path d="M 80 50 Q 80 100 130 130" fill="none" stroke="currentColor" stroke-width="24" stroke-linecap="round" class="text-black dark:text-white"/>
+  
+  <!-- Cyan arc (right) -->
+  <path d="M 270 50 Q 270 100 220 130" fill="none" stroke="currentColor" stroke-width="24" stroke-linecap="round" class="text-cyan-400"/>
+  
+  <!-- Black arc (bottom left) -->
+  <path d="M 60 130 Q 60 160 110 170" fill="none" stroke="currentColor" stroke-width="24" stroke-linecap="round" class="text-black dark:text-white"/>
+  
+  <!-- Cyan arc (bottom right) -->
+  <path d="M 290 130 Q 290 160 240 170" fill="none" stroke="currentColor" stroke-width="24" stroke-linecap="round" class="text-cyan-400"/>
+</svg>
