@@ -88,18 +88,18 @@ export function Footer() {
             </h4>
             <div className="space-y-4">
               <a
-                href="mailto:hello@thirtynine.inc"
+                href="mailto:info@thirtynineinc.co.ke"
                 className="flex items-center gap-3 text-sm text-gray-400 hover:text-cyan-400 transition-colors"
               >
                 <Mail className="w-4 h-4" />
-                hello@thirtynine.inc
+                info@thirtynineinc.co.ke
               </a>
               <a
-                href="tel:+254700000000"
+                href="tel:+254 707 208768"
                 className="flex items-center gap-3 text-sm text-gray-400 hover:text-cyan-400 transition-colors"
               >
                 <Phone className="w-4 h-4" />
-                +254 (0) 700 000 000
+                +254 707 208768
               </a>
               <div className="flex items-center gap-3 text-sm text-gray-400">
                 <MapPin className="w-4 h-4" />
