@@ -6,7 +6,7 @@ import { Check } from "lucide-react";
 const packages = [
   {
     name: "Growth Starter",
-    price: "199,999",
+    
     desc: "Perfect for new brands building foundation",
     items: [
       "Social Media Setup & Strategy",
@@ -18,7 +18,7 @@ const packages = [
   },
   {
     name: "Growth Accelerator",
-    price: "499,999",
+    
     desc: "For brands ready to scale fast",
     items: [
       "Full Social Media Management",
@@ -50,8 +50,8 @@ const packages = [
 
 export function Packages() {
   const handleGetStarted = (packageName: string) => {
-    const message = `I'm interested in the ${packageName} package. Could we discuss more details?`;
-    const whatsappLink = `https://wa.me/?text=${encodeURIComponent(message)}`;
+    const message = `Hi, I am interested in the ${packageName} package. I would like to learn more about getting started.`;
+    const whatsappLink = `https://wa.me/254705913410?text=${encodeURIComponent(message)}`;
     window.open(whatsappLink, "_blank");
   };
 
@@ -104,12 +104,12 @@ export function Packages() {
               <h3 className="text-2xl font-bold mb-2 text-black dark:text-white transition-colors duration-300">{pkg.name}</h3>
               <p className="text-gray-700 dark:text-gray-400 text-sm mb-6 transition-colors duration-300">{pkg.desc}</p>
 
-              <div className="mb-8">
+              {/* <div className="mb-8">
                 <div className="text-4xl font-bold text-cyan-500 dark:text-cyan-400 transition-colors duration-300">
                   KES {pkg.price}
                   <span className="text-sm text-gray-700 dark:text-gray-400 font-normal transition-colors duration-300">/month</span>
                 </div>
-              </div>
+              </div> **/}
 
               <button
                 onClick={() => handleGetStarted(pkg.name)}

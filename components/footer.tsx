@@ -38,7 +38,7 @@ export function Footer() {
               Services
             </h4>
             <ul className="space-y-3">
-              {["Social Media", "Paid Ads", "Web Development", "Design"].map(
+              {["social media marketing & management", "Web Development", "Blog Post Design", "Graphic Design"].map(
                 (link, idx) => (
                   <li key={idx}>
                     <a
@@ -95,11 +95,11 @@ export function Footer() {
                 info@thirtynineinc.co.ke
               </a>
               <a
-                href="tel:+254 707 208768"
+                href="tel:+254 705 913 410"
                 className="flex items-center gap-3 text-sm text-gray-400 hover:text-cyan-400 transition-colors"
               >
                 <Phone className="w-4 h-4" />
-                +254 707 208768
+                +254 705 913 410
               </a>
               <div className="flex items-center gap-3 text-sm text-gray-400">
                 <MapPin className="w-4 h-4" />
