@@ -1,13 +1,48 @@
 "use client";
 
+import type { SVGProps } from "react";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Briefcase, Share2 } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
+
+function InstagramIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
+      <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" strokeWidth="1.8" />
+      <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" strokeWidth="1.8" />
+      <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
+
+function FacebookIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
+      <path
+        d="M14.5 8H17V4.5h-2.5C11.9 4.5 10 6.4 10 9.1V11H8v3.5h2V20h3.5v-5.5h2.6L16.5 11h-3V9.3c0-.8.5-1.3 1.5-1.3Z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+}
 
 export function Footer() {
   const handleScrollTo = (target: string) => {
     const element = document.querySelector(target);
     element?.scrollIntoView({ behavior: "smooth" });
   };
+
+  const socialLinks = [
+    {
+      href: "https://www.instagram.com/thirtynine.inc?stkn=bHJ0d3d0cWs1a243",
+      label: "Instagram",
+      icon: InstagramIcon,
+    },
+    {
+      href: "https://www.facebook.com/share/19o6etAxVF/",
+      label: "Facebook",
+      icon: FacebookIcon,
+    },
+  ];
 
   return (
     <footer className="bg-gray-100 dark:bg-gray-950 border-t border-gray-300 dark:border-gray-900 transition-colors duration-300">
@@ -113,25 +148,21 @@ export function Footer() {
         <div className="border-t border-gray-800 pt-8 mt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="text-xs text-gray-500">
-              © 2026 ThirtyNine.INC. All rights reserved.
+              Powered by <a href="https://bodasure.com" target="_blank" rel="noreferrer" className="text-cyan-500 hover:text-cyan-400">Boda Sure</a>
             </div>
             <div className="flex gap-6">
-              {[
-                { icon: Briefcase, label: "LinkedIn" },
-                { icon: Share2, label: "Share" },
-              ].map((social, idx) => {
-                const Icon = social.icon;
-                return (
-                  <a
-                    key={idx}
-                    href="#"
-                    className="text-gray-400 hover:text-cyan-400 transition-colors"
-                    aria-label={social.label}
-                  >
-                    <Icon className="w-5 h-5" />
-                  </a>
-                );
-              })}
+              {socialLinks.map(({ href, label, icon: Icon }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-gray-400 hover:text-cyan-400 transition-colors"
+                  aria-label={label}
+                >
+                  <Icon className="w-5 h-5" />
+                </a>
+              ))}
             </div>
           </div>
         </div>
